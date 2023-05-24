@@ -42,7 +42,11 @@ export const Calculator = () => {
 
   return (
     <Wrapper onSubmit={onFormSubmit}>
-      <Input value={number} onChange={handleInputChange} />
+      <Input
+        placeholder="number"
+        value={number}
+        onChange={handleInputChange}
+      />
       <Numbers>
         <Button value="1" onClick={() => onClick("1")}>
           1
