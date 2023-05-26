@@ -3,32 +3,48 @@ import { styled } from "styled-components";
 export const Wrapper = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  justify-content: space-around;
   border: 1px solid black;
-  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px 2px black;
+  height: 300px;
   padding: 20px;
   gap: 10px;
+  background-color: #141414;
 `;
 
 export const Input = styled.input`
-  margin: 0;
-  max-width: fit-content;
+  display: flex;
+  align-content: stretch;
+  text-align: right;
+  height: 30px;
+  margin: 12px;
   margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: inset -2px -2px 2px 1px gray;
+  border: none;
+  border-radius: 5px;
+
+  &::placeholder {
+    text-align: center;
+  }
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Numbers = styled.div`
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-justify-content: center;
-align-items: center;
-grid-gap: 5px;
-width: 200px;
-`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+`;
 
 export const Button = styled.button`
-width: 45px;
-height: auto;
-margin: auto;
+  font-size: 20px;
+  width: 60px;
+  height: 30px;
+  margin: auto;
 `;
