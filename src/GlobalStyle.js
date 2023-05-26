@@ -14,5 +14,8 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: inherit;
     }
   
+    body {
+      background-color: #3D3D3D;
+    }
 
 `;
