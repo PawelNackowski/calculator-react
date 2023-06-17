@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Button, Input, Numbers, ThemeButton, Wrapper } from "./styled";
+import { Button, Input, Numbers, Wrapper } from "./styled";
+import { ThemeChangeButton } from "./themeChangeButton";
 
 export const Calculator = () => {
   const [number, setNumber] = useState("");
   const [result, setResult] = useState("");
-
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -42,12 +42,8 @@ export const Calculator = () => {
 
   return (
     <Wrapper onSubmit={onFormSubmit}>
-      <ThemeButton>change theme</ThemeButton>
-      <Input
-        placeholder="number"
-        value={number}
-        onChange={handleInputChange}
-      />
+      <ThemeChangeButton />
+      <Input placeholder="number" value={number} onChange={handleInputChange} />
       <Numbers>
         <Button value="1" onClick={() => onClick("1")}>
           1
