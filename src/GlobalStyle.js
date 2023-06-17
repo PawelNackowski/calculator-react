@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   
     body {
       background-color: ${({ theme }) => theme.colors.background};
-      transition: 1s;
+      transition: background-color 1s;
     }
 
 `;
