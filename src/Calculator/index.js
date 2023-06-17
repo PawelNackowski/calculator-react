@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Input, Numbers, Wrapper } from "./styled";
+import { Button, ClearPosition, Input, Numbers, Wrapper } from "./styled";
 import { ThemeChangeButton } from "./themeChangeButton";
 
 export const Calculator = () => {
@@ -19,31 +19,35 @@ export const Calculator = () => {
       calculateResult();
     } else if (value === "clear") {
       clearInput();
-    }
-    else {
+    } else {
       setNumber(number + value);
     }
   };
 
-    const calculateResult = () => {
-      try {
-        const evalResult = eval(number);
-        setResult(evalResult);
-        setNumber(evalResult.toString());
-      } catch (error) {
-        setResult("Error");
-      }
-    };
+  const calculateResult = () => {
+    try {
+      const evalResult = eval(number);
+      setResult(evalResult);
+      setNumber(evalResult.toString());
+    } catch (error) {
+      setResult("Error");
+    }
+  };
 
-    const clearInput = () => {
-      setNumber("");
-      setResult("");
-    };
+  const clearInput = () => {
+    setNumber("");
+    setResult("");
+  };
 
   return (
     <Wrapper onSubmit={onFormSubmit}>
       <ThemeChangeButton />
       <Input placeholder="number" value={number} onChange={handleInputChange} />
+      <ClearPosition>
+        <Button value="clear" onClick={() => onClick("clear")}>
+          C
+        </Button>
+      </ClearPosition>
       <Numbers>
         <Button value="1" onClick={() => onClick("1")}>
           1
@@ -54,6 +58,9 @@ export const Calculator = () => {
         <Button value="3" onClick={() => onClick("3")}>
           3
         </Button>
+        <Button value="-" onClick={() => onClick("-")}>
+          -
+        </Button>
         <Button value="4" onClick={() => onClick("4")}>
           4
         </Button>
@@ -62,6 +69,9 @@ export const Calculator = () => {
         </Button>
         <Button value="6" onClick={() => onClick("6")}>
           6
+        </Button>
+        <Button value="+" onClick={() => onClick("+")}>
+          +
         </Button>
         <Button value="7" onClick={() => onClick("7")}>
           7
@@ -72,26 +82,20 @@ export const Calculator = () => {
         <Button value="9" onClick={() => onClick("9")}>
           9
         </Button>
-        <Button value="0" onClick={() => onClick("0")}>
-          0
-        </Button>
-        <Button value="-" onClick={() => onClick("-")}>
-          -
-        </Button>
-        <Button value="+" onClick={() => onClick("+")}>
-          +
-        </Button>
         <Button value="*" onClick={() => onClick("*")}>
           *
         </Button>
-        <Button value="/" onClick={() => onClick("/")}>
-          /
+        <Button value="." onClick={() => onClick(".")}>
+          ,
+        </Button>
+        <Button value="0" onClick={() => onClick("0")}>
+          0
         </Button>
         <Button value="=" onClick={() => onClick("=")}>
           =
         </Button>
-        <Button value="clear" onClick={() => onClick("clear")}>
-          C
+        <Button value="/" onClick={() => onClick("/")}>
+          /
         </Button>
       </Numbers>
     </Wrapper>
