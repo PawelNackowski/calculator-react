@@ -49,3 +49,10 @@ export const Button = styled.button`
   margin: auto;
   box-shadow: inset -2px -2px 2px 1px gray;
 `;
+
+export const ThemeButton = styled.button`
+  width: 60px;
+  height: 30px;
+  margin: auto;
+  font-size: 10px;
+`

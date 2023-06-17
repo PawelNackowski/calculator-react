@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Input, Numbers, Wrapper } from "./styled";
+import { Button, Input, Numbers, ThemeButton, Wrapper } from "./styled";
 
 export const Calculator = () => {
   const [number, setNumber] = useState("");
@@ -42,6 +42,7 @@ export const Calculator = () => {
 
   return (
     <Wrapper onSubmit={onFormSubmit}>
+      <ThemeButton>change theme</ThemeButton>
       <Input
         placeholder="number"
         value={number}
