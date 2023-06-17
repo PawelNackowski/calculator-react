@@ -7,23 +7,25 @@ export const Wrapper = styled.form`
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 4px 4px 8px 2px black;
-  height: 300px;
+  height: 500px;
   padding: 20px;
   gap: 10px;
   background-color: ${({theme}) => theme.colors.body};
+  transition: background-color 1s ;
 `;
 
 export const Input = styled.input`
   display: flex;
   align-content: stretch;
   text-align: right;
-  height: 30px;
-  margin: 12px;
-  margin-bottom: 15px;
+  padding: 10px;
+  height: 50px;
+  margin-top: 16px;
   font-weight: bold;
+  font-size: 20px;
   letter-spacing: 2px;
   box-shadow: inset -2px -2px 2px 1px gray;
-  border: none;
+  border: 1px solid ${({theme}) => theme.colors.background};
   border-radius: 5px;
 
   &::placeholder {
@@ -36,23 +38,26 @@ export const Input = styled.input`
 
 export const Numbers = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
-  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr );
+  grid-gap: 8px;
 `;
 
 export const Button = styled.button`
-  font-size: 20px;
-  width: 60px;
-  height: 30px;
+  font-size: 30px;
+  width: 70px;
+  height: 56px;
   margin: auto;
   box-shadow: inset -2px -2px 2px 1px gray;
 `;
 
 export const ThemeButton = styled.button`
-  width: 60px;
+  position: fixed;
+  width:  60px;
   height: 30px;
   margin: auto;
   font-size: 10px;
+`
+
+export const ClearPosition = styled.div`
+
 `
