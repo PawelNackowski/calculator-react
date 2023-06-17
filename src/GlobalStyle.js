@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     }
   
     body {
-      background-color: #3D3D3D;
+      background-color: ${({ theme }) => theme.colors.background};
+      transition: 1s;
     }
 
 `;
