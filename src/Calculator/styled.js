@@ -47,4 +47,5 @@ export const Button = styled.button`
   width: 60px;
   height: 30px;
   margin: auto;
+  box-shadow: inset -2px -2px 2px 1px gray;
 `;
