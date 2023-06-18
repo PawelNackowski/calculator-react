@@ -11,7 +11,10 @@ export const Calculator = () => {
   };
 
   const handleInputChange = (event) => {
-    setNumber(event.target.value);
+       const inputValue = event.target.value;
+       if (/^[0-9*+\-/./]*$/.test(inputValue)) {
+         setNumber(inputValue);
+       }
   };
 
   const onClick = (value) => {
@@ -42,12 +45,17 @@ export const Calculator = () => {
   return (
     <Wrapper onSubmit={onFormSubmit}>
       <ThemeChangeButton />
-      <Input placeholder="number" value={number} onChange={handleInputChange} />
-      <ClearPosition>
-        <Button value="clear" onClick={() => onClick("clear")}>
+      <Input
+        pattern="^[0-9*+\-/./*]"
+        placeholder="number"
+        value={number}
+        onChange={handleInputChange}
+      />
+      <div>
+        <Button clear value="clear" onClick={() => onClick("clear")}>
           C
         </Button>
-      </ClearPosition>
+      </div>
       <Numbers>
         <Button value="1" onClick={() => onClick("1")}>
           1
@@ -91,7 +99,7 @@ export const Calculator = () => {
         <Button value="0" onClick={() => onClick("0")}>
           0
         </Button>
-        <Button value="=" onClick={() => onClick("=")}>
+        <Button value="=" onClick={(submit) => onClick("=")}>
           =
         </Button>
         <Button value="/" onClick={() => onClick("/")}>
