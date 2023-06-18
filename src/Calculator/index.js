@@ -12,7 +12,7 @@ export const Calculator = () => {
 
   const handleInputChange = (event) => {
        const inputValue = event.target.value;
-       if (/^[0-9*+\-/./]*$/.test(inputValue)) {
+       if (/^[0-9*+\-/.\\*]+$/.test(inputValue)) {
          setNumber(inputValue);
        }
   };
@@ -34,6 +34,7 @@ export const Calculator = () => {
       setNumber(evalResult.toString());
     } catch (error) {
       setResult("Error");
+      setNumber("error");
     }
   };
 
@@ -46,7 +47,6 @@ export const Calculator = () => {
     <Wrapper onSubmit={onFormSubmit}>
       <ThemeChangeButton />
       <Input
-        pattern="^[0-9*+\-/./*]"
         placeholder="number"
         value={number}
         onChange={handleInputChange}
