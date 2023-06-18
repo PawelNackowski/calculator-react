@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, ButtonClearPosition, Input, Numbers, Wrapper } from "./styled";
 import { ThemeChangeButton } from "./themeChangeButton";
+import { evaluate } from "mathjs";
 
 export const Calculator = () => {
   const [number, setNumber] = useState("");
@@ -29,7 +30,7 @@ export const Calculator = () => {
 
   const calculateResult = () => {
     try {
-      const evalResult = eval(number);
+      const evalResult = evaluate(number);
       setResult(evalResult);
       setNumber(evalResult.toString());
     } catch (error) {
