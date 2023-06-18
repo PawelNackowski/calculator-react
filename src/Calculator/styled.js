@@ -49,7 +49,7 @@ export const Button = styled.button`
   font-family: "Orbitron";
   font-size: 28px;
   font-weight: 600;
-  min-width: ${(props) => (props.clear ? "128px" : "60px")};
+  min-width: ${(props) => (props.bigger ? "128px" : "60px")};
   height: 50px;
   box-shadow: inset -3px -3px 2px 3px gray;
   border: 1px solid ${({ theme }) => theme.colors.gray};
@@ -88,7 +88,7 @@ export const ButtonClearPosition = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${({ theme }) => theme.colors.text};
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   letter-spacing: 2px;
   `
