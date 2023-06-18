@@ -51,7 +51,6 @@ export const Button = styled.button`
   font-weight: 600;
   min-width: ${(props) => (props.clear ? "128px" : "60px")};
   height: 50px;
-  margin: auto;
   box-shadow: inset -3px -3px 2px 3px gray;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 4px;
@@ -83,3 +82,13 @@ export const ButtonModePosition = styled.div`
   align-items: center;
   color: ${({ theme }) => theme.colors.text};
   `;
+
+export const ButtonClearPosition = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  `
