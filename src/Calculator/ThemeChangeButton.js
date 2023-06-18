@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { ThemeButton } from "./styled"
+import { ButtonModePosition, ThemeButton } from "./styled"
 import { selectDarkTheme, toggleTheme } from "./themeSlice";
 
 export const ThemeChangeButton = () => {
@@ -7,10 +7,11 @@ export const ThemeChangeButton = () => {
   const isDarkTheme = useSelector(selectDarkTheme);
 
   return (
-    <div>
+    <ButtonModePosition>
+      dark mode
       <ThemeButton onClick={() => dispatch(toggleTheme())}>
         {isDarkTheme ? "ON" : "OFF"}
       </ThemeButton>
-    </div>
+    </ButtonModePosition>
   );
 };
