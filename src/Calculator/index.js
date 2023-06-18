@@ -52,7 +52,7 @@ export const Calculator = () => {
         onChange={handleInputChange}
       />
       <ButtonClearPosition>
-        <Button clear value="clear" onClick={() => onClick("clear")}>
+        <Button bigger="true" value="clear" onClick={() => onClick("clear")}>
           C
         </Button>
         CASIO
