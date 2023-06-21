@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, TopButtonPosition, Input, Numbers, Wrapper } from "./styled";
+import { Button, TopButtonPosition, Input, Numbers, Wrapper, TopButton } from "./styled";
 import { ThemeChangeButton } from "./themeChangeButton";
 import { evaluate } from "mathjs";
 
@@ -53,13 +53,12 @@ export const Calculator = () => {
   return (
     <Wrapper onSubmit={onFormSubmit}>
       <ThemeChangeButton />
-      <Input
-        value={number}
-        onChange={handleInputChange}
-      />
+      <Input value={number} onChange={handleInputChange} />
       <TopButtonPosition>
-        <Button onClick={() => onClick("clear")}>C</Button>
-        <Button onClick={() => onClick("clearLast")}>⇦</Button>
+        <TopButton>
+          <Button onClick={() => onClick("clear")}>C</Button>
+          <Button $arrowLeft onClick={() => onClick("clearLast")}>⇦</Button>
+        </TopButton>
         CASIO
       </TopButtonPosition>
       <Numbers>

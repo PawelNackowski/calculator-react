@@ -46,11 +46,15 @@ export const Numbers = styled.div`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Orbitron";
-  font-size: 28px;
+  font-size: ${(props) => (props.$arrowLeft ? "40px" : "28px")};
   font-weight: 600;
   min-width: 60px;
   height: 50px;
+  padding-bottom: ${(props) => (props.$arrowLeft ? "8px" : "auto")};
   box-shadow: inset -3px -3px 2px 3px gray;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 4px;
@@ -81,7 +85,12 @@ export const ButtonModePosition = styled.div`
   justify-content: flex-end;
   align-items: center;
   color: ${({ theme }) => theme.colors.text};
-  `;
+`;
+
+export const TopButton = styled.div`
+  display: flex;
+  gap: 8px;
+`;
 
 export const TopButtonPosition = styled.div`
   display: flex;
@@ -91,4 +100,4 @@ export const TopButtonPosition = styled.div`
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 2px;
-  `
+`;
