@@ -18,14 +18,20 @@ export const Calculator = () => {
        }
   };
 
+  const handleRemoveLastNumber = () => {
+    setNumber(number.slice(0, -1));
+  };
+
   const onClick = (value) => {
     if (value === "=") {
       calculateResult();
     } else if (value === "clear") {
       clearInput();
-    } else {
-      setNumber(number + value);
-    }
+    } else if (value === "clearLast" ) {
+      handleRemoveLastNumber();
+    }  else if (number.length < 10) {
+    setNumber(number + value);
+  }
   };
 
   const calculateResult = () => {
@@ -48,14 +54,12 @@ export const Calculator = () => {
     <Wrapper onSubmit={onFormSubmit}>
       <ThemeChangeButton />
       <Input
-        placeholder="number"
         value={number}
         onChange={handleInputChange}
       />
       <ButtonClearPosition>
-        <Button bigger="true" value="clear" onClick={() => onClick("clear")}>
-          C
-        </Button>
+        <Button onClick={() => onClick("clear")}>C</Button>
+        <Button onClick={() => onClick("clearLast")}>⇦</Button>
         CASIO
       </ButtonClearPosition>
       <Numbers>
