@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, ButtonClearPosition, Input, Numbers, Wrapper } from "./styled";
+import { Button, TopButtonPosition, Input, Numbers, Wrapper } from "./styled";
 import { ThemeChangeButton } from "./themeChangeButton";
 import { evaluate } from "mathjs";
 
@@ -57,11 +57,11 @@ export const Calculator = () => {
         value={number}
         onChange={handleInputChange}
       />
-      <ButtonClearPosition>
+      <TopButtonPosition>
         <Button onClick={() => onClick("clear")}>C</Button>
         <Button onClick={() => onClick("clearLast")}>⇦</Button>
         CASIO
-      </ButtonClearPosition>
+      </TopButtonPosition>
       <Numbers>
         <Button value="1" onClick={() => onClick("1")}>
           1

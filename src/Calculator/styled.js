@@ -49,7 +49,7 @@ export const Button = styled.button`
   font-family: "Orbitron";
   font-size: 28px;
   font-weight: 600;
-  min-width: ${(props) => (props.bigger ? "128px" : "60px")};
+  min-width: 60px;
   height: 50px;
   box-shadow: inset -3px -3px 2px 3px gray;
   border: 1px solid ${({ theme }) => theme.colors.gray};
@@ -83,7 +83,7 @@ export const ButtonModePosition = styled.div`
   color: ${({ theme }) => theme.colors.text};
   `;
 
-export const ButtonClearPosition = styled.div`
+export const TopButtonPosition = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
