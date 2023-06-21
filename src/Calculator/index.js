@@ -62,17 +62,17 @@ export const Calculator = () => {
         CASIO
       </TopButtonPosition>
       <Numbers>
-        <Button value="1" onClick={() => onClick("1")}>
-          1
+        <Button value="7" onClick={() => onClick("7")}>
+          7
         </Button>
-        <Button value="2" onClick={() => onClick("2")}>
-          2
+        <Button value="8" onClick={() => onClick("8")}>
+          8
         </Button>
-        <Button value="3" onClick={() => onClick("3")}>
-          3
+        <Button value="9" onClick={() => onClick("9")}>
+          9
         </Button>
-        <Button value="-" onClick={() => onClick("-")}>
-          -
+        <Button value="+" onClick={() => onClick("+")}>
+          +
         </Button>
         <Button value="4" onClick={() => onClick("4")}>
           4
@@ -83,17 +83,17 @@ export const Calculator = () => {
         <Button value="6" onClick={() => onClick("6")}>
           6
         </Button>
-        <Button value="+" onClick={() => onClick("+")}>
-          +
+        <Button value="-" onClick={() => onClick("-")}>
+          -
         </Button>
-        <Button value="7" onClick={() => onClick("7")}>
-          7
+        <Button value="1" onClick={() => onClick("1")}>
+          1
         </Button>
-        <Button value="8" onClick={() => onClick("8")}>
-          8
+        <Button value="2" onClick={() => onClick("2")}>
+          2
         </Button>
-        <Button value="9" onClick={() => onClick("9")}>
-          9
+        <Button value="3" onClick={() => onClick("3")}>
+          3
         </Button>
         <Button value="*" onClick={() => onClick("*")}>
           *
